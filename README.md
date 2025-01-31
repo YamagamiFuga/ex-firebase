@@ -5,7 +5,7 @@ Firebase基礎
 Next.js + Vercel + Firebaseを用いて簡単なTodoアプリのWebサービス
 
 
-
+------------------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
