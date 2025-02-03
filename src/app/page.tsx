@@ -1,4 +1,5 @@
 "use client";
+import Login from "./components/Login";
 import { useState, useEffect} from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
@@ -160,6 +161,8 @@ export default function Home() {
   return (
     <div className="app-container">
       <h1>Firebase演習</h1>
+      <Login />
+      <h2>Firestore演習</h2>
       <div className="form-container">
         <label htmlFor="username">userName :</label>
         <input
