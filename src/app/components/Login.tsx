@@ -7,13 +7,13 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setpassword] = useState('');
 
-    const signup = async(event) => {
+    const signup = async(event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const user = await signupWithEmailAndPassword(email, password);
         console.log("登録User情報 :", user)
     };
 
-    const signin = async(event) => {
+    const signin = async(event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const user = await signinWithEmailAndPassword(email, password);
         console.log("サインインUser情報 :", user)
