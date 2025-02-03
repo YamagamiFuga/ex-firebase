@@ -4,8 +4,11 @@ Firebase基礎
 # Firestoreのデータ管理を学ぶ
 データの取得、追加、更新、検知、削除
 
-# 演習コード
-page.tsx
+# FirebaseのAuthenticationの使い方
+サインイン、ログイン、ログアウト機能作成
+
+# 演習ファイル
+page.tsx,firebase-config.tsx,Login.tsx
 
 
 ------------------------------------------------------------------
