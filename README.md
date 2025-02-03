@@ -1,10 +1,8 @@
 # チュートリアル2
 Firebase基礎
-
-# ゴール
-Next.js + Vercel + Firebaseを用いて簡単なTodoアプリのWebサービス
-
-
+Firestoreのデータ管理を学ぶ
+データの取得、追加、更新、検知、削除
+演習コード→page.tsx
 ------------------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
