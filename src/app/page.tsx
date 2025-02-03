@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect} from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 
@@ -23,7 +23,6 @@ interface User {
   userId: string;
   name: string;
   age: number;
-  location: string;
 }
 
 export default function Home() {
@@ -43,10 +42,12 @@ export default function Home() {
       // });
 
       const _users = QuerySnapshot.docs.map(doc => {
+        const userData = doc.data() as Partial<User>;
         return {
           userId: doc.id,
-          ...doc.data()
-        }
+          name: userData.name ?? "No Name",
+          age: userData.age ?? 0
+        };
       });
       setUsers(_users);
     });
@@ -63,13 +64,13 @@ export default function Home() {
 
       const _users: User[] = [];
       snapshot.forEach((doc) => {
-        const userData = doc.data() as User;
+        const userData = doc.data() as Partial<User>; // `Partial<User>` を使用
         _users.push({
-          userId: doc.id, 
-          ...userData, 
+          userId: doc.id,
+          name: userData.name ?? "No name",
+          age: userData.age ?? 0,
         });
       });
-
       setUsers(_users);
   };
 
@@ -108,7 +109,7 @@ export default function Home() {
         return;
       }
 
-      const newData = {};
+      const newData: Partial<User> = {};
       if (userName) {
         newData['name'] = userName;
       }
