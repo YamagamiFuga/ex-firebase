@@ -56,7 +56,7 @@ export const signinWithEmailAndPassword = async (email: string, password: string
   }
 };
 
-export const singOut = async () => {
+export const logOut = async () => {
   try {
     await signOut(auth);
     alert("ログアウト成功");

@@ -129,7 +129,8 @@ export default function Home() {
         console.error(error);
       }
   };
-
+  
+  //データの削除
   const handleClickdeleteButton = async () => {
       if (!documentId) {
         alert('documentIdをセットしてください');

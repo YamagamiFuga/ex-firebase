@@ -1,7 +1,7 @@
 "use client";
 
 import {useState} from 'react';
-import { signupWithEmailAndPassword, signinWithEmailAndPassword, singOut } from '../firebase/firebase-config';
+import { signupWithEmailAndPassword, signinWithEmailAndPassword, logOut } from '../firebase/firebase-config';
 
 export default function Login() {
     const [email, setEmail] = useState('');
@@ -45,11 +45,11 @@ export default function Login() {
                 <button type={'submit'}>ログイン</button>
             </form>
             <div>
-            <button type={'button'} onClick={singOut}>
+            <button type={'button'} onClick={logOut}>
                 ログアウト
             </button>
             </div>
         </div>
-            );
+    );
 
 }
